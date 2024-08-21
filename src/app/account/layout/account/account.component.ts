@@ -5,7 +5,7 @@ import { HeaderComponent } from '../header/header.component';
 import { DashboardComponent } from '../../dashboad/dashboard.component';
 import { AttendanceComponent } from '../../attendance/attendance.component';
 import { EmployeeComponent } from '../../employee/employee.component';
-import { LeavesComponent } from '../../leaves/leaves.component';
+import { LeaveComponent } from '../../leave/leave.component';
 import { SalaryComponent } from '../../salary/salary.component';
 import { SidenavComponent } from '../sidenav/sidenav.component';
 import { ProfileComponent } from '../../../profile/profile.component';
@@ -14,7 +14,7 @@ import { ProfileComponent } from '../../../profile/profile.component';
   selector: 'app-account',
   standalone: true,
   imports: [HeaderComponent,RouterOutlet,DashboardComponent,AttendanceComponent,EmployeeComponent,
-    LeavesComponent,
+    LeaveComponent,
     SalaryComponent,RouterModule,SidenavComponent,ProfileComponent
 
   ],

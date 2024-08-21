@@ -4,7 +4,6 @@ import { AccountComponent } from './account/layout/account/account.component';
 import { AttendanceComponent } from './account/attendance/attendance.component';
 import { DashboardComponent } from './account/dashboad/dashboard.component';
 import { EmployeeComponent } from './account/employee/employee.component';
-import { LeavesComponent } from './account/leaves/leaves.component';
 import { SalaryComponent } from './account/salary/salary.component';
 import { EmployeeGuard } from './guard/employee.guard';
 import { AdminComponent } from './admin/layout/admin/admin.component';
@@ -14,6 +13,7 @@ import { UpdateEmployeeComponent } from './admin/update-employee/update-employee
 import { AdminGuard } from './guard/admin.guard';
 import { ProfileComponent } from './profile/profile.component';
 import { ViewAllEmployeeComponent } from './admin/view-all-employee/view-all-employee.component';
+import { LeaveComponent } from './account/leave/leave.component';
 
 export const routes: Routes = [
     {
@@ -43,7 +43,7 @@ export const routes: Routes = [
             
             {
                 path:'leaves',
-                component:LeavesComponent
+                component:LeaveComponent
             },
             {
                 path:'salary',
