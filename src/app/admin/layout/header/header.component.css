@@ -1,0 +1,14 @@
+/* Additional styling for header component */
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  .sign-out{
+    border: none;
+    color: #F1F1F6;
+    font: bolder;
+    font-size: 20px;
+    
+  }

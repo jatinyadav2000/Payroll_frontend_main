@@ -1,0 +1,30 @@
+.sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 60px; /* Adjust based on header height */
+    left: 0;
+    background-color: #5a5a8e;
+    
+    border-right: 1px solid #ddd;
+    z-index: 999; /* Ensure sidebar is below the header */
+  }
+  
+  .sidenav a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #F1F1F6;
+    display: block;
+    font-weight: 600;
+  }
+  
+  .sidenav a.active {
+    background-color:  #F1F1F6;
+    color: #3a3468;
+  }
+  
+  .sidenav a:hover {
+    color: #3a3468;
+  }
+  

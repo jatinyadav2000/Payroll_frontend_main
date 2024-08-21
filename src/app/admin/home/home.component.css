@@ -1,0 +1,9 @@
+.container{
+    height: 100vh;
+    color: #3a3468 ;
+    font-weight: 500;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}

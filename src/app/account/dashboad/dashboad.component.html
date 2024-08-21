@@ -1,0 +1,46 @@
+<div class="dashboard">
+    <div class="card">
+      <div class="card-header " style="background-color:#5a5a8e ; color: #F1F1F6; font-weight: 600;">
+        Dashboard Overview
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <div class="card text-white bg-success">
+              <div class="card-body">
+                <h5 class="card-title">Total Employees</h5>
+                <p class="card-text">{{ dashboardData.totalEmployee }}</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4 mb-3">
+            <div class="card text-white bg-warning">
+              <div class="card-body">
+                <h5 class="card-title">Total Leaves</h5>
+                <p class="card-text">{{ dashboardData.totalLeavesCount }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card text-white bg-danger">
+              <div class="card-body">
+                <h5 class="card-title">Total Salaries</h5>
+                <p class="card-text">{{ dashboardData.totalSalaryCount }}</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4 mb-3">
+            <div class="card text-white bg-primary">
+              <div class="card-body">
+                <h5 class="card-title">Today's Leaves</h5>
+                <p class="card-text">{{ dashboardData.todaysLeaves }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

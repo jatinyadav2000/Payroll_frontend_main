@@ -1,0 +1,180 @@
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-9">
+        <div class="wrapper" style="padding: 20px; border-radius: 8px;">
+          <h2>Register</h2>
+          <hr />
+          <form  #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)" >
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input
+                type="text"
+                id="firstName"
+                class="form-control"
+                name="firstName"
+                [(ngModel)]="userData.firstName"
+                #firstName="ngModel"
+                required
+                [class.is-invalid]="firstName.invalid && firstName.touched"
+              />
+              <small class="text-danger" [class.d-none]="firstName.valid || firstName.untouched">
+                This is required field
+              </small>
+            </div>
+    
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input
+                  type="text"
+                  id="lastName"
+                  class="form-control"
+                  name="lastName"
+                  [(ngModel)]="userData.lastName"
+                  #lastName="ngModel"
+                  required
+                  [class.is-invalid]="lastName.invalid && lastName.touched"
+                />
+                <small class="text-danger" [class.d-none]="lastName.valid || lastName.untouched">
+                  This is required field
+                </small>
+              </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input
+                type="text"
+                class="form-control"
+                name="email"
+                [(ngModel)]="userData.email"
+                required
+                #email="ngModel"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                [class.is-invalid]="email.invalid && email.touched"
+              />
+              <div *ngIf="email.errors && email.touched">
+                <small class="text-danger" *ngIf="email.errors['required']">Email is required</small>
+                <small class="text-danger" *ngIf="email.errors['pattern']">Email must be valid</small>
+              </div>
+            </div>
+     
+            <div class="form-group">
+              <label>Mobile</label>
+              <input
+                type="text"
+                #mobile="ngModel"
+                [class.is-invalid]="mobile.invalid && mobile.touched"
+                class="form-control"
+                name="mobile"
+                [(ngModel)]="userData.mobile"
+                required
+                pattern="^\d{10}$"
+              />
+              <div *ngIf="mobile.errors && mobile.touched">
+                <small class="text-danger" *ngIf="mobile.errors['required']">Phone number is required</small>
+                <small class="text-danger" *ngIf="mobile.errors['pattern']">Phone number must be 10 digit</small>
+              </div>
+            </div>
+     
+            <div class="form-group">
+                <label>Salary</label>
+                <input
+                  type="text"
+                  #salary="ngModel"
+                  [class.is-invalid]="salary.invalid && salary.touched"
+                  class="form-control"
+                  name="salary"
+                  [(ngModel)]="userData.salary"
+                  required
+                  pattern="^\d$"
+                />
+                <div *ngIf="salary.errors && salary.touched">
+                  <small class="text-danger" *ngIf="salary.errors['required']">Salary is required</small>
+                  <small class="text-danger" *ngIf="salary.errors['pattern']">Salary must be in digit</small>
+                </div>
+            </div>
+            <div class="form-group">
+              <label for="designation">Role</label>
+              <input
+                type="text"
+                id="designation"
+                class="form-control"
+                name="designation"
+                [(ngModel)]="userData.designation"
+                #designation="ngModel"
+                required
+                [class.is-invalid]="designation.invalid && designation.touched"
+              />
+              <small class="text-danger" [class.d-none]="designation.valid || designation.untouched">
+                This is required field
+              </small>
+            </div>
+         
+            <!-- <div class="form-group">
+              <label for="">Manager</label>
+              <select class="form-control" [(ngModel)]="userData.city" name="city">
+                <option *ngFor="let city of cities">{{ city }}</option>
+              </select>
+            </div> -->
+            <div class="form-group">
+              <label for="manager">Manager</label>
+              <select
+                id="manager"
+                class="form-control"
+                [(ngModel)]="userData.manager"
+                name="manager"
+              >
+                <option *ngFor="let manager of managers" [value]="manager">{{ manager }}</option>
+              </select>
+            </div>
+     
+            <div class="form-group">
+              <label for="">Gender</label>
+              <div class="form-check">
+                <input
+                  type="radio"
+                  name="gender"
+                  class="form-check-input"
+                  value="male"
+                  [(ngModel)]="userData.gender"
+                />
+                <label for="" class="form-check-label">Male</label>
+              </div>
+              <div class="form-check">
+                <input
+                  type="radio"
+                  name="gender"
+                  class="form-check-input"
+                  value="female"
+                  [(ngModel)]="userData.gender"
+                />
+                <label for="" class="form-check-label">Female</label>
+              </div>
+            </div>
+     
+            <!-- <div class="form-group">
+              <div class="form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  [(ngModel)]="userData.subscribe"
+                  name="subscribe"
+                />
+                <label for="" class="form-check-label">Subscribe</label>
+              </div>
+            </div> -->
+     
+            <input 
+              type="submit"
+              value="Register"
+              class="btn btn-block" style="background-color: #100e21  ; color: white;"
+              [disabled]="registerForm.invalid"
+            />
+            <br />
+            <p class="text-center">
+              <a routerLink="/login">Already register? Click here</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
